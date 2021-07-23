@@ -9,11 +9,11 @@ namespace SmolinaFirstLesson
     {
         static void Main(string[] args)
         {
-            Figure figure = new Figure() { Name = "Triangle", NumberOfSides = 3 };
-            Rectangle rectangle = new Rectangle() { Name = "Foursquare", NumberOfSides = 4 };
-            Polygon polygon = new Polygon() { Name = "Hexagon", NumberOfSides = 6 };
+            Triangle triangle = new Triangle() { Name = "Equilateral Triangle", NumberOfSides = 3, SideSize = 5 };
+            Rectangle rectangle = new Rectangle() { Name = "Foursquare", NumberOfSides = 4, SideSize = 5 };
+            Polygon polygon = new Polygon() { Name = "Hexagon", NumberOfSides = 6, SideSize = 5 };
 
-            Figure[] figures = new Figure[] { figure, rectangle, polygon };
+            IFigure[] figures = new IFigure[] { triangle, rectangle, polygon };
 
             foreach (var item in figures)
             {

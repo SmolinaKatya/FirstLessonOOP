@@ -5,13 +5,16 @@ using System.Text;
 
 namespace SmolinaFirstLesson
 {
-    public class Figure
+    public class Triangle : IFigure
     {
         public string Name { get; set; }
         public int NumberOfSides { get; set; }
-        public virtual void Display()
+        public int SideSize { get; set; }
+        public double Area { get; set; }
+        public void Display()
         {
-            Console.WriteLine("Figure Name = {0}, NumberOfSides = {1}", Name, NumberOfSides);
+            Area = Math.Sqrt(3) * Math.Pow(SideSize, 2) / 4;
+            Console.WriteLine("Figure Name = {0}, NumberOfSides = {1}, Figure area = {2}", Name, NumberOfSides, Math.Round(Area, 2));
         }
     }
 }
