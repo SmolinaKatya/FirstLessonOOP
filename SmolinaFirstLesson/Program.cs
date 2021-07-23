@@ -19,7 +19,6 @@ namespace SmolinaFirstLesson
             {
                 item.Display();
             }
-            //Console.ReadKey();
         }
     }
 }
